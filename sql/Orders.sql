@@ -1,0 +1,15 @@
+insert into Orders (oID, pID, vID, uID, city, state, country, zip, total) values (1, 47, 31, 33, 'Verkhnya Rozhanka', null, 'Ukraine', '5', '286.99');
+insert into Orders (oID, pID, vID, uID, city, state, country, zip, total) values (2, 50, 48, 1, 'Fresno', 'California', 'United States', '8367', '6.99');
+insert into Orders (oID, pID, vID, uID, city, state, country, zip, total) values (3, 43, 43, 46, 'Yanshan', null, 'China', '4611', '257.89');
+insert into Orders (oID, pID, vID, uID, city, state, country, zip, total) values (4, 19, 44, 13, 'Ojo de Agua', 'Michoacan De Ocampo', 'Mexico', '149', '9.99');
+insert into Orders (oID, pID, vID, uID, city, state, country, zip, total) values (5, 49, 44, 18, 'Tomislavgrad', null, 'Bosnia and Herzegovina', '63944', '20.00');
+insert into Orders (oID, pID, vID, uID, city, state, country, zip, total) values (6, 20, 6, 5, 'Huolongping', null, 'China', '6', '9.97');
+insert into Orders (oID, pID, vID, uID, city, state, country, zip, total) values (7, 34, 34, 41, 'Qinglong', null, 'China', '36', '30.26');
+insert into Orders (oID, pID, vID, uID, city, state, country, zip, total) values (8, 47, 10, 30, 'Longtou', null, 'China', '86203', '286.99');
+insert into Orders (oID, pID, vID, uID, city, state, country, zip, total) values (9, 36, 14, 6, 'San Jose', null, 'Philippines', '3', '14.00');
+insert into Orders (oID, pID, vID, uID, city, state, country, zip, total) values (10, 28, 36, 17, 'Forquilhinha', null, 'Brazil', '211', '18.82');
+insert into Orders (oID, pID, vID, uID, city, state, country, zip, total) values (11, 17, 19, 41, 'Pantin', 'Île-de-France', 'France', '6', '600.00');
+insert into Orders (oID, pID, vID, uID, city, state, country, zip, total) values (12, 46, 6, 20, 'Pa Sang', null, 'Thailand', '4', '21.66');
+insert into Orders (oID, pID, vID, uID, city, state, country, zip, total) values (13, 14, 45, 29, 'Jagdaqi', null, 'China', '5085', '22.49');
+insert into Orders (oID, pID, vID, uID, city, state, country, zip, total) values (14, 1, 37, 3, 'El Pino', null, 'Dominican Republic', '3075', '40.00');
+insert into Orders (oID, pID, vID, uID, city, state, country, zip, total) values (15, 36, 40, 22, 'København', 'Region Hovedstaden', 'Denmark', '8092', '14.00');
