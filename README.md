@@ -12,7 +12,7 @@
 3. Access eRowdy
    Visit eRowdy at: https://cs.csub.edu/~cokpara/3350/eRowdy/index.php
    Login Credentials:
-   - User Profile: {email: jg@smail.com, password: ABCabc123!}
+   - User Profile: {email: "jg@smail.com", password: "ABCabc123!"}
   
 4. Contact
    For help, contact @Chidoskii or @LogWB
