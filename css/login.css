@@ -1,0 +1,173 @@
+/*----------------------------- General start -----------------------------*/
+html,
+body {
+  margin: 0;
+  background-color: black;
+  font-family: Roboto, Arial;
+}
+
+.page-contents {
+  margin: 0;
+  background-color: gainsboro;
+  padding-top: 100px;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*----------------------------- General end -----------------------------*/
+/*----------------------------- Brand Name (eRowdy) start -----------------------------*/
+
+.proj-title {
+  margin: 25px;
+  padding: 10px;
+  font-size: 30pt;
+  font-family: "Montserrat Alternates", sans-serif;
+  letter-spacing: -7px;
+  font-weight: 600;
+  font-style: italic;
+  text-align: center;
+  text-shadow: 2px 2px #111;
+}
+
+/*--- Brand letters start ---*/
+
+.brand-letter-e {
+  color: red;
+}
+
+.brand-letter-r {
+  color: blue;
+}
+
+.brand-letter-o {
+  color: gold;
+}
+
+.brand-letter-w {
+  color: violet;
+}
+
+.brand-letter-d {
+  color: tomato;
+}
+
+.brand-letter-y {
+  color: lime;
+}
+
+/*--- Brand letters end ---*/
+/*----------------------------- Brand Name end -----------------------------*/
+/*----------------------------- Login Form start -----------------------------*/
+
+.login-form-can {
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Main Form*/
+.login {
+  padding: 25px;
+  width: 350px;
+  border: #bdbdbd solid 1px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgb(54, 54, 54);
+}
+
+#creds-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#creds-form > div > label {
+  padding-top: 10px;
+}
+
+#creds-form > div > input {
+  margin-bottom: 10px;
+}
+
+.creds-msg {
+  margin: 0;
+  text-align: center;
+  font-size: 15pt;
+  font-weight: 500;
+}
+
+.form_field_wrap {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#Login {
+  width: 100%;
+  margin-top: 15px;
+  background-color: blue;
+  color: aliceblue;
+  border-radius: 5px;
+}
+
+#Login:hover {
+  background-color: tomato;
+}
+/*---*/
+/*Sub Form*/
+.log-sign-link {
+  display: flex;
+  flex-direction: column;
+}
+
+.creds-prompt {
+  font-size: 10pt;
+  padding: 35px 0 15px;
+  text-align: center;
+}
+
+.creds-link {
+  font-size: 10pt;
+  padding: 10px;
+  width: 350px;
+  text-align: center;
+  border: #bdbdbd solid 1px;
+  box-shadow: 3px 3px 3px rgb(54, 54, 54);
+  border-radius: 5px;
+}
+/*---*/
+
+/*----------------------------- Login Form end -----------------------------*/
+/*----------------------------- Misc start -----------------------------*/
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: whitesmoke;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: tomato;
+}
+
+/*----------------------------- Misc end -----------------------------*/

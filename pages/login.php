@@ -1,30 +1,16 @@
 <?php
-require_once("config.php");
+require_once("../php/config.php");
+require_once("../php/functions.php");
 
-function get_ven($email) {
-    $db = get_mysqli_connection();
-    $query = $db->prepare("SELECT * FROM Vendors  WHERE email = ?");
-    $query->bind_param("s", $email);
-    $query->execute();
-    $result = $query->get_result();
-    $results = $result->fetch_all(MYSQLI_ASSOC);
+define('TITLE', "Sign In");
+define('LOG_FILE', './error.log');
+define('CSS', "../css/login.css");
+define('DEVELOPER', true);
 
-    
-    return $results[0];
-
-}
-
-function get_user($email) {
-    $db = get_mysqli_connection();
-    $query = $db->prepare("SELECT * FROM Users  WHERE email = ?");
-    $query->bind_param("s", $email);
-    $query->execute();
-    $result = $query->get_result();
-    $results = $result->fetch_all(MYSQLI_ASSOC);
-
-    
-    return $results[0];
-
+if(DEVELOPER) {
+  error_reporting(E_ALL);
+  ini_set("display_errors", 1);
+  ini_set("error_log", LOG_FILE);
 }
 
 if (isset($_POST["Login"])) {
@@ -59,7 +45,7 @@ if (isset($_POST["Login"])) {
                     $_SESSION["is_emp"] = false;
                 }
 
-                header("Location: index.php");
+                header("Location: ../index.php");
             }
             else {
                 $_SESSION["login_error"] = "Invalid username and password combination.";
@@ -88,7 +74,7 @@ if (isset($_POST["Login"])) {
                     $_SESSION["is_user"] = false;
                 }
 
-                header("Location: index.php");
+                header("Location: ../index.php");
             }
             else {
                 $_SESSION["login_error"] = "Invalid username and password combination.";
@@ -102,90 +88,68 @@ if (isset($_POST["Login"])) {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title><?= $PROJECT_NAME . " | Login" ?></title>
-    <link rel="stylesheet" href="styles/style.css">
-    
-    <style>
-    body {
-        background-image: url('img/vitokick.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        color: black;}
-    .login {
-        font-family: Roboto, Arial;
-        padding: 10px 10px 1px 10px;
-        background: rgba(10, 12, 15, 0.5);
-        width: 275px;
-    }
-    .tenor-gif-embed {
-        margin: auto;
-        width: 50%;
-        padding: 10px;
-    }
-    button, html input[type=button], input[type=reset], input[type=submit] {
-    -webkit-appearance: button;
-    cursor: pointer;
-    color: white;
-    background-color: rgba(77, 130, 255, 0.87);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-right: 8px;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    transition: opacity 0.3s;
-    padding-bottom: 1px;
-    padding-top: 1px;
-    padding-left: 5px;
-    padding-right: 5px;
-    vertical-align: top;
-}
-  button, input, optgroup, select, textarea {
-    color: black;
-    font: inherit;
-    margin: 0;
-}
-button:hover, html input[type=button]:hover, input[type=reset]:hover, input[type=submit]:hover {
-      opacity: 0.6;
-    }
-button:active, html input[type=button]:active, input[type=reset]:active, input[type=submit]:active {
-      opacity: 0.3;
-    }
-</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><?= $PROJECT_NAME . " | " . TITLE ?></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href=<?= CSS ?>>
 </head>
-<body>
-<h1><?= $PROJECT_NAME ?></h1>
-<h2>Hello! Please Login.</h2>
+    <body>
+        <div class="page-contents">
+            <div class="container">
+                <h1 class="proj-title">
+                    <span class="brand-letter-e">e</span>
+                    <span class="brand-letter-r">R</span>
+                    <span class="brand-letter-o">o</span>
+                    <span class="brand-letter-w">w</span>
+                    <span class="brand-letter-d">d</span>
+                    <span class="brand-letter-y">y</span>
+                </h1>
+                <div class="login-form-can">
+                    <div class="login">
+                        <h2 class="creds-msg">Sign In</h2>
+                        <?php 
+                        $login_form = new PhpFormBuilder();
+                        $login_form->set_att("method", "POST");
+                        $login_form->set_att("id", "creds-form");
+                        $login_form->add_input("Email", array(
+                            "type" => "text",
+                            "required" => true
+                        ), "login_email");
+                        $login_form->add_input("Password", array(
+                            "type" => "password",
+                            "required" => true
+                        ), "login_password");
+                        $login_form->add_input("Login", array(
+                            "type" => "submit",
+                            "value" => "Login"
+                        ), "Login");
+                        $login_form->build_form();
 
-
-<div class="login">
-<?php 
-$login_form = new PhpFormBuilder();
-$login_form->set_att("method", "POST");
-$login_form->add_input("email", array(
-    "type" => "text",
-    "required" => true
-), "login_email");
-$login_form->add_input("Password", array(
-    "type" => "password",
-    "required" => true
-), "login_password");
-$login_form->add_input("Login", array(
-    "type" => "submit",
-    "value" => "Login"
-), "Login");
-$login_form->build_form();
-
-if (isset($_SESSION["login_error"])) {
-    echo $_SESSION["login_error"] . "<br>";
-    unset($_SESSION["login_error"]);
-}
-?>
-</div>
-</body>
+                        if (isset($_SESSION["login_error"])) {
+                            echo $_SESSION["login_error"] . "<br>";
+                            unset($_SESSION["login_error"]);
+                        }
+                        ?>
+                    </div>
+                    <div class="log-sign-link">
+                        <div class="creds-prompt">
+                            Need to create an account? 
+                        </div>
+                        <a class="creds-link" href="#">
+                            Create eRowdy account!
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    </body>
 </html>

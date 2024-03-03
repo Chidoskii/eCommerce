@@ -1,7 +1,7 @@
 <?php
-require_once("config.php");
+require_once("./php/config.php");
 if(!isset($_SESSION["is_emp"]) && !isset($_SESSION["is_user"])){
-  require_once("index.php");
+  require_once("../index.php");
 }
 
 ?>

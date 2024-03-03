@@ -1,7 +1,7 @@
 <?php
 
 // Change this to your project name
-$PROJECT_NAME = "eCommerce";
+$PROJECT_NAME = "eRowdy";
 
 date_default_timezone_set('America/Los_Angeles');
 error_reporting(E_ALL);
