@@ -15,6 +15,3 @@ if (!empty($_SESSION["affected_rows"])) {
 ?>
 
 
-
-
-
