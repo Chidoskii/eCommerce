@@ -2,3 +2,96 @@ html,
 body {
   background-color: black;
 }
+
+.topnav {
+  margin: 0;
+}
+
+.subnav {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+}
+
+.navbar-brand {
+  padding: 0;
+  margin: 0;
+  letter-spacing: 1px;
+  font-size: 20pt;
+  font-style: italic;
+  font-family: 'Montserrat Alternates', sans-serif;
+  letter-spacing: -5px;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 2px 2px #111;
+}
+
+.delivery-addy,
+.user-acnt-opts,
+.shop-cart-opts {
+  height: 64px;
+  display: flex;
+  color: #111;
+}
+
+.nav-serch-form,
+.shop-cart-opts {
+  align-items: center;
+}
+
+.user-acnt-opts {
+  flex-direction: column;
+}
+
+.loc-ping,
+.cart-png {
+  height: 35px;
+}
+
+.del-to-user,
+.user-city-zip,
+.user-greet,
+.account-options {
+  height: 23%;
+}
+
+.user-addy-details {
+  display: flex;
+  flex-direction: column;
+  color: #111;
+}
+
+.rowdy-nav {
+  padding: 0;
+  display: flex;
+}
+
+.modal-nav-button {
+  background-image: url('../imgs/ham-transp.png'); /* The image used */
+  background-color: #ffffff; /* Used if the image is unavailable */
+  box-shadow: none;
+  border: none;
+  color: black;
+  height: 30px; /* You must set a specified height */
+  width: 70px;
+  background-position: left;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: contain;
+  padding: 0 0 0 30px;
+}
+
+.modal-nav-button:hover {
+  background-color: gainsboro;
+  box-shadow: none;
+}
+
+.offcanvas-header {
+  background-color: aqua;
+}
+
+.page-contents {
+  padding-top: 150px;
+  min-height: 150vh;
+}

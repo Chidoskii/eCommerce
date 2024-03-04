@@ -26,13 +26,62 @@ if($_SESSION["logged_in"] == false){
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<nav class="navbar fixed-top bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand">Navbar</a>
-    <form class="d-flex" role="search">
+<nav class="navbar fixed-top bg-body-tertiary rowdy-nav">
+  <div class="container-fluid topnav">
+    <a class="navbar-brand" href="#">
+      <span class="brand-letter-e">e</span>
+      <span class="brand-letter-r">R</span>
+      <span class="brand-letter-o">o</span>
+      <span class="brand-letter-w">w</span>
+      <span class="brand-letter-d">d</span>
+      <span class="brand-letter-y">y</span>
+    </a>
+    <div class="delivery-addy">
+      <div class="loc-img"><img class="loc-ping" src="./imgs/location_pin.png" alt="..." /></div>
+      <div class="user-addy-details">
+        <div class="del-to-user">Deliver to XXXX</div>
+        <div class="user-city-zip">Bakersfield 93313</div>
+      </div>
+    </div>
+    <form class="d-flex nav-serch-form" role="search">
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success" type="submit">Search</button>
     </form>
+    <div class="user-acnt-opts">
+      <div class="user-greet">Hello, XXXX</div>
+      <div class="account-options">Account & Orders</div>
+    </div>
+    <a class="shop-cart-opts" href="#">
+      <img class="cart-png" src="./imgs/shop.png" alt="..." />
+      <div class="shopping-text">Shopping Cart</div>
+</a>
+  </div>
+  <div class="subnav container-fluid">
+  <button class="btn btn-primary modal-nav-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+  All
+</button>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+    </div>
+    <div class="dropdown mt-3">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+        Dropdown button
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
   </div>
 </nav>
 <div class="page-contents">
