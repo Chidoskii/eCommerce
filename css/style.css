@@ -5,12 +5,12 @@ body {
 
 .topnav {
   margin: 0;
-  border-bottom: #999999 1px solid;
+  border-bottom: #c2c2c2 1px solid;
 }
 
 .subnav {
   background-color: #ffffff;
-  border-bottom: #888 1px solid;
+  border-bottom: #c2c2c2 1px solid;
   color: #111;
   display: flex;
   align-items: center;
@@ -57,16 +57,30 @@ body {
   flex-direction: column;
 }
 
+.logout-link {
+  text-align: center;
+  border-top: #c2c2c2;
+}
+
 .loc-ping,
 .cart-png {
   height: 35px;
 }
 
 .del-to-user,
-.user-city-zip,
-.user-greet,
-.account-options {
+.user-city-zip {
   height: 23%;
+}
+
+.account-opts {
+  text-align: left;
+  color: #111;
+  border: none;
+  background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity));
+}
+
+.topnav-drop-menu {
+  padding: 0;
 }
 
 .user-addy-details {
@@ -104,12 +118,13 @@ body {
 }
 
 .page-contents {
-  padding-top: 150px;
+  padding-top: 114px;
   min-height: 150vh;
 }
 
 .carousel {
   color: #111;
+  border-bottom: #c2c2c2 1px solid;
 }
 
 .carousel-item-pic {

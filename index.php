@@ -47,8 +47,19 @@ if($_SESSION["logged_in"] == false){
       <button class="btn btn-outline-success" type="submit">Search</button>
     </form>
     <div class="user-acnt-opts">
-      <div class="user-greet">Hello, XXXX</div>
-      <div class="account-options">Account & Orders</div>
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle account-opts" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Hello, XXXX <br>
+          Account & Orders
+        </button>
+        <ul class="dropdown-menu topnav-drop-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item logout-link" href="./php/logout.php">
+            LOG OUT
+          </a></li>
+        </ul>
+    </div>
     </div>
     <a class="shop-cart-opts" href="#">
       <img class="cart-png" src="./imgs/shop.png" alt="..." />
@@ -82,12 +93,12 @@ if($_SESSION["logged_in"] == false){
         </div>
       </div>
     </div>
-    <div class="category-links">sdfghfsdg</div>
-    <div class="category-links">asdfghdasg</div>
-    <div class="category-links">dsafgfdsg</div>
-    <div class="category-links">fdagadg</div>
-    <div class="category-links">fdagadg</div>
-    <div class="category-links">afdgafdg</div>
+    <div class="category-links">Clothing</div>
+    <div class="category-links">Entertainment</div>
+    <div class="category-links">Electronics</div>
+    <div class="category-links">Home & Kitchen</div>
+    <div class="category-links">Health & Hygiene</div>
+    <div class="category-links">Garden & Outdoors</div>
   </div>
 </nav>
 <div class="page-contents">
@@ -127,25 +138,14 @@ if($_SESSION["logged_in"] == false){
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-
+<div class="container-fluid">
 <h1><?= $PROJECT_NAME?></h1>
 
 
-<?php
-      if(isset($_SESSION["is_emp"]) && ($_SESSION["is_emp"])){
-        require_once("./pages/vendor.php");
-      }
-      else{
-        require_once("./pages/user.php");
-      }
-    ?>
-
-
-<a class="logout-btn" href="./php/logout.php"><button class="sub">LOG OUT</button></a>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
 
 
