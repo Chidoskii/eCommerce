@@ -2,7 +2,7 @@
 
 1. Introduction
 
-eRowdy is a an e-commerce platform where users can buy products and vendors can sell products. Users will be able to give ratings and reviews, and create a wishlist of items they want to purchase at a later date. Vendors will be able to generate useful data sets that can be used to develop better busines strategies.
+eRowdy is a an e-commerce platform where users can buy products and vendors can sell products. Users will be able to give ratings, write reviews, and create wishlists for items they want to purchase at a later date. Vendors will be able to generate useful data sets that can be used to develop better business strategies.
 
 2. Project Design
 
