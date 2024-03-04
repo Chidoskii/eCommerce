@@ -69,8 +69,17 @@ function filter_vendor($vendor) {
 }*/
 }
 
-	/*Print the orders
-	$sql = "Select"*/
+//Function to print order details
+function order_detail($ID) {
+	$sql = "SELECT Products.prod_desc, Orders.total FROM Orders RIGHT JOIN Products 
+ON Orders.pID = Products.pID WHERE Orders.uID=? ORDER BY Orders.oID";
+	$query = $conn->prepare($sql);
+	$query->bind_param("i", $ID);
+	$query->execute();
+	$result = $query->get_result();
+
+	//prints each order
+}
 
 //Function to print total
 function total($ID) {
