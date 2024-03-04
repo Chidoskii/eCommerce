@@ -30,7 +30,6 @@ body {
 .navbar-brand {
   padding: 0;
   margin: 0;
-  letter-spacing: 1px;
   font-size: 20pt;
   font-style: italic;
   font-family: 'Montserrat Alternates', sans-serif;
@@ -120,12 +119,13 @@ body {
 }
 
 .offcanvas-header {
-  background-color: aqua;
+  background-color: aquamarine;
 }
 
 .page-contents {
   padding-top: 114px;
   min-height: 150vh;
+  background: linear-gradient(#999, gainsboro);
 }
 
 .carousel {
@@ -133,6 +133,81 @@ body {
   border-bottom: #c2c2c2 1px solid;
 }
 
+.carousel-item {
+  background-color: linear-gradient(#e9ecef, #ffffff);
+}
+
 .carousel-item-pic {
   width: 100%;
+}
+
+.ci-3 {
+  background-color: #e9ecef;
+}
+
+#carouselExampleDark .carousel-item img {
+  object-fit: cover;
+  object-position: center;
+  height: 55vh;
+  overflow: hidden;
+}
+
+/* Footer styling*/
+footer {
+  background-color: #e9ecef;
+  border-top: #c2c2c2 1px solid;
+}
+
+.footy-can {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 25vh;
+}
+
+.footer-links-can {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+
+.footy-sub-header {
+  margin: 0;
+  font-size: 14pt;
+  font-weight: 500;
+}
+
+.footy-links-l,
+.footy-links-m,
+.footy-links-r {
+  display: flex;
+  flex-direction: column;
+}
+
+.footy-links-l > a,
+.footy-links-m > a,
+.footy-links-r > a {
+  color: #111;
+}
+
+.footer-copyright {
+  display: flex;
+  font-size: 12pt;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  padding-bottom: 5px;
+}
+
+.erowdy-copyright {
+  font-size: 12pt;
+  font-style: italic;
+  font-family: 'Montserrat Alternates', sans-serif;
+  letter-spacing: -3px;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 1px 1px #111;
+  align-items: center;
 }
