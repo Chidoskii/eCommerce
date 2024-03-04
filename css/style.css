@@ -5,14 +5,26 @@ body {
 
 .topnav {
   margin: 0;
+  border-bottom: #999999 1px solid;
 }
 
 .subnav {
   background-color: #ffffff;
+  border-bottom: #888 1px solid;
+  color: #111;
   display: flex;
   align-items: center;
   height: 50px;
   width: 100%;
+}
+
+.category-links {
+  display: flex;
+  height: 50px;
+  width: 15%;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .navbar-brand {
@@ -94,4 +106,12 @@ body {
 .page-contents {
   padding-top: 150px;
   min-height: 150vh;
+}
+
+.carousel {
+  color: #111;
+}
+
+.carousel-item-pic {
+  width: 100%;
 }
