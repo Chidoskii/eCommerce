@@ -20,7 +20,7 @@
 <body>
 <nav class="navbar fixed-top bg-body-tertiary rowdy-nav">
   <div class="container-fluid topnav">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="../index.php">
       <div class="logo-group">
       <span class="brand-letter-e">e</span>
       <span class="brand-letter-r">R</span>
@@ -56,7 +56,7 @@
         </ul>
     </div>
     </div>
-    <a class="shop-cart-opts" href="#">
+    <a class="shop-cart-opts" href="./cart.php">
       <img class="cart-png" src="../imgs/shop.png" alt="..." />
       <div class="shopping-text">Shopping Cart</div>
     </a>
@@ -89,12 +89,12 @@
         </div>
       </div>
     </div>
-    <div class="category-links">Clothing</div>
-    <div class="category-links">Automotives</div>
-    <div class="category-links">Electronics</div>
-    <div class="category-links"><a href="../pages/homeKitchen.php">Home & Kitchen</a></div>
-    <div class="category-links">Office Supplies</div>
-    <div class="category-links">Garden & Outdoors</div>
+    <div class="category-links"><a href="./clothing.php">Clothing</a></div>
+    <div class="category-links"><a href="./automotives.php">Automotives</a></div>
+    <div class="category-links"><a href="./electronics.php">Electronics</a></div>
+    <div class="category-links"><a href="./homeKitchen.php">Home & Kitchen</a></div>
+    <div class="category-links"><a href="./office.php">Office Supplies</a></div>
+    <div class="category-links"><a href="./clothing.php">Garden & Outdoors</a></div>
   </div>
 </nav>
 <div class="page-contents">
@@ -114,20 +114,27 @@
 
   $result = filter_category($category, $db);
 
+  echo "<div class='bigger-can container-fluid'>";
+
   while ($row = $result->fetch_assoc()) {
     $image = $row['img'];
-  $desc = $row["prod_desc"];
+    $desc = $row["prod_desc"];
+    $price = $row["price"];
 
   $card = <<<TEXT
     <div class="big-can">
     <div class="kitchen-prod-img"><img class="" src="$image" alt="..." /></div>
+    <div class="prod-desc-can">
     <div class="kitchen-prod-desc">$desc</div>
+    <div class="kitchen-prod-price">$$price.00</div>
+    </div>
     </div>
     TEXT;
 
     echo $card;
   };
 ?>
+</div>
 </div>
 
 <?php

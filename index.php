@@ -64,7 +64,7 @@ if($_SESSION["logged_in"] == false){
         </ul>
     </div>
     </div>
-    <a class="shop-cart-opts" href="#">
+    <a class="shop-cart-opts" href="./cart.php">
       <img class="cart-png" src="./imgs/shop.png" alt="..." />
       <div class="shopping-text">Shopping Cart</div>
     </a>
@@ -97,12 +97,12 @@ if($_SESSION["logged_in"] == false){
         </div>
       </div>
     </div>
-    <div class="category-links">Clothing</div>
-    <div class="category-links">Automotives</div>
-    <div class="category-links">Electronics</div>
+    <div class="category-links"><a href="./pages/clothing.php">Clothing</a></div>
+    <div class="category-links"><a href="./pages/automotives.php">Automotives</a></div>
+    <div class="category-links"><a href="./pages/electronics.php">Electronics</a></div>
     <div class="category-links"><a href="./pages/homeKitchen.php">Home & Kitchen</a></div>
-    <div class="category-links">Office Supplies</div>
-    <div class="category-links">Garden & Outdoors</div>
+    <div class="category-links"><a href="./pages/office.php">Office Supplies</a></div>
+    <div class="category-links"><a href="./pages/clothing.php">Garden & Outdoors</a></div>
   </div>
 </nav>
 <div class="page-contents">

@@ -99,42 +99,12 @@
 </nav>
 <div class="page-contents">
 
-<h2>ALL Electronics</h2>
-<?php
-  $db = get_mysqli_connection();
-  $query = false;
 
-  $category = 'Electronics';
-  echo "searching by for products...<br><br>";
-  $query = $db->prepare("select * from Products where category = ?");
-  
-  if (!$query) {
-    echo "uh oh";
-  }
 
-  $result = filter_category($category, $db);
 
-  echo "<div class='bigger-can container-fluid'>";
 
-  while ($row = $result->fetch_assoc()) {
-    $image = $row['img'];
-    $desc = $row["prod_desc"];
-    $price = $row["price"];
 
-  $card = <<<TEXT
-    <div class="big-can">
-    <div class="kitchen-prod-img"><img class="" src="$image" alt="..." /></div>
-    <div class="prod-desc-can">
-    <div class="kitchen-prod-desc">$desc</div>
-    <div class="kitchen-prod-price">$$price.00</div>
-    </div>
-    </div>
-    TEXT;
 
-    echo $card;
-  };
-?>
-</div>
 </div>
 
 <?php

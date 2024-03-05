@@ -99,12 +99,12 @@
 </nav>
 <div class="page-contents">
 
-<h2>ALL Electronics</h2>
+<h2>ALL Office Supplies</h2>
 <?php
   $db = get_mysqli_connection();
   $query = false;
 
-  $category = 'Electronics';
+  $category = 'Office Supplies';
   echo "searching by for products...<br><br>";
   $query = $db->prepare("select * from Products where category = ?");
   

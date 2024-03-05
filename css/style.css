@@ -288,3 +288,63 @@ footer {
   text-shadow: 1px 1px #111;
   align-items: center;
 }
+
+/*********  DATABASE   **********/
+
+.bigger-can {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.big-can {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 22%;
+}
+
+.kitchen-prod-img > img {
+  display: flex;
+  height: 100%;
+  max-width: 300px;
+  object-fit: contain;
+}
+
+.kitchen-prod-img {
+  height: 79%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.prod-desc-can {
+  height: 19%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.kitchen-prod-price {
+  text-align: left;
+}
+
+.num-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.id-can {
+  display: flex;
+  flex-direction: row;
+}
+
+.kitchen-prod-desc {
+  width: 70%;
+}
+
+.num-name {
+  width: 29%;
+}
