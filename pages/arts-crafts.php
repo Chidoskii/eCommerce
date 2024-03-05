@@ -79,12 +79,16 @@
         </div>
         <div class="dropdown mt-3">
           <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-            Dropdown button
+            Departments
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="./automotives.php">Automotive</a></li>
+            <li><a class="dropdown-item" href="./arts-crafts.php">Arts & Crafts</a></li>
+            <li><a class="dropdown-item" href="./clothing.php">Clothing</a></li>
+            <li><a class="dropdown-item" href="./electronics.php">Electronics</a></li>
+            <li><a class="dropdown-item" href="./gardenOutdoors.php">Garden & Outdoors</a></li>
+            <li><a class="dropdown-item" href="./homeKitchen.php">Home & Kitchen</a></li>
+            <li><a class="dropdown-item" href="./office.php">Office Supplies</a></li>
           </ul>
         </div>
       </div>

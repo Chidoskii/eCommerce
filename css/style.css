@@ -296,13 +296,19 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 100px;
 }
 
 .big-can {
   display: flex;
   flex-direction: column;
   height: 400px;
-  width: 22%;
+  width: 30%;
+  border: #7c7c7c 1px solid;
+  margin: 25px auto;
+  background-color: #e9ecef;
+  box-shadow: 3px 3px 3px #111;
+  border-radius: 15px;
 }
 
 .kitchen-prod-img > img {
@@ -318,18 +324,25 @@ footer {
   display: flex;
   justify-content: center;
   background-color: #ffffff;
-  min-width: 300px;
+  min-width: 298px;
+  max-height: 300px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom: #7c7c7c 1px solid;
 }
 
 .prod-desc-can {
   height: 19%;
   display: flex;
+  padding: 10px;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .kitchen-prod-price {
+  display: flex;
   text-align: left;
+  padding: 0px 10px;
 }
 
 .num-name {
@@ -355,4 +368,10 @@ footer {
 .dpt-header {
   margin: 50px 0;
   text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .big-can {
+    width: 30% !important;
+  }
 }

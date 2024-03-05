@@ -1,8 +1,27 @@
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 650px) {
+  .big-can {
+    width: 49% !important;
+  }
 }
 
 @media screen and (min-width: 750px) {
+  .big-can {
+    width: 45% !important;
+  }
+}
+
+@media screen and (max-width: 925px) {
+  .delivery-addy,
+  .account-opts {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1000px) {
+  .big-can {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 47%;
+  }
 }

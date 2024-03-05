@@ -1,5 +1,6 @@
 <?php
 require_once("./php/config.php");
+require_once("./php/functions.php");
 
 if(empty($_SESSION["logged_in"])){
     header("location: ./pages/login.php");
@@ -23,6 +24,8 @@ if($_SESSION["logged_in"] == false){
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+    <link rel="stylesheet" href="./css/tablet.css">
     <link rel="shortcut icon" href="../../imgs/erowdy.ico" />
 </head>
 <body>
@@ -87,12 +90,15 @@ if($_SESSION["logged_in"] == false){
         </div>
         <div class="dropdown mt-3">
           <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-            Dropdown button
+            Departments
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="./pages/automotives.php">Automotive</a></li>
+            <li><a class="dropdown-item" href="./pages/clothing.php">Clothing</a></li>
+            <li><a class="dropdown-item" href="./pages/electronics.php">Electronics</a></li>
+            <li><a class="dropdown-item" href="./pages/gardenOutdoors.php">Garden & Outdoors</a></li>
+            <li><a class="dropdown-item" href="./pages/homeKitchen.php">Home & Kitchen</a></li>
+            <li><a class="dropdown-item" href="./pages/office.php">Office Supplies</a></li>
           </ul>
         </div>
       </div>
@@ -102,7 +108,7 @@ if($_SESSION["logged_in"] == false){
     <div class="category-links"><a href="./pages/electronics.php">Electronics</a></div>
     <div class="category-links"><a href="./pages/homeKitchen.php">Home & Kitchen</a></div>
     <div class="category-links"><a href="./pages/office.php">Office Supplies</a></div>
-    <div class="category-links"><a href="./pages/clothing.php">Garden & Outdoors</a></div>
+    <div class="category-links"><a href="./pages/gardenOutdoors.php">Garden & Outdoors</a></div>
   </div>
 </nav>
 <div class="page-contents">
@@ -147,6 +153,43 @@ if($_SESSION["logged_in"] == false){
 
 <?php
   require_once("./components/displayProducts.php");
+
+  $db = get_mysqli_connection();
+  $query = false;
+
+  $category = 'Home and Kitchen';
+  $query = $db->prepare("select * from Products");
+  
+  if (!$query) {
+    echo "uh oh";
+  }
+
+  $result = getAll($db);
+
+  echo "<div class='bigger-can container-md'>";
+
+  while ($row = $result->fetch_assoc()) {
+    $id = $row['pID'];
+    $image = $row['img'];
+    $desc = $row["prod_desc"];
+    $price = $row["price"];
+
+  $card = <<<TEXT
+    <div class="big-can">
+    <div class="kitchen-prod-img"><img class="" src="$image" alt="..." /></div>
+    <div class="prod-desc-can">
+    <div class="id-can">
+    <div class="num-name">Item #
+    <div id="$id">$id</div></div>
+    <div class="kitchen-prod-desc"> $desc</div>
+    </div>
+    </div>
+    <div class="kitchen-prod-price">$$price.00</div>
+    </div>
+    TEXT;
+
+    echo $card;
+  };
 ?>
 
 </div>
