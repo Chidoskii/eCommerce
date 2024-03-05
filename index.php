@@ -41,8 +41,8 @@ if($_SESSION["logged_in"] == false){
     <div class="delivery-addy">
       <div class="loc-img"><img class="loc-ping" src="./imgs/location_pin.png" alt="..." /></div>
         <div class="user-addy-details">
-          <div class="del-to-user">Deliver to XXXX</div>
-          <div class="user-city-zip">Bakersfield 93313</div>
+          <div class="del-to-user">Deliver to <?= $_SESSION["get_user"]["first_name"]?></div>
+          <div class="user-city-zip"><?= $_SESSION["get_user"]["city"]?> <?= $_SESSION["get_user"]["zip"]?></div>
         </div>
     </div>
     <form class="d-flex nav-serch-form" role="search">
@@ -52,7 +52,7 @@ if($_SESSION["logged_in"] == false){
     <div class="user-acnt-opts">
     <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle account-opts" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Hello, XXXX <br>
+          Hello, <?= $_SESSION["get_user"]["first_name"]?> <br>
           Account & Orders
         </button>
         <ul class="dropdown-menu topnav-drop-menu">
@@ -78,7 +78,7 @@ if($_SESSION["logged_in"] == false){
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
       <div class="offcanvas-header">
       <img src="./imgs/erowdy.png" class="d-block erowdy-runner" alt="...">
-        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Hello, XXXXX</h5>
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Hello, <?= $_SESSION["get_user"]["first_name"]?> </h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">

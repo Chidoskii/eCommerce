@@ -99,13 +99,12 @@
 </nav>
 <div class="page-contents">
 
-<h2>ALL Garden and Outdoors</h2>
+<h2 class="dpt-header">Garden and Outdoors</h2>
 <?php
   $db = get_mysqli_connection();
   $query = false;
 
   $category = 'Garden and Outdoors';
-  echo "searching by for products...<br><br>";
   $query = $db->prepare("select * from Products where category = ?");
   
   if (!$query) {
@@ -114,7 +113,7 @@
 
   $result = filter_category($category, $db);
 
-  echo "<div class='bigger-can container-fluid'>";
+  echo "<div class='bigger-can container-md'>";
 
   while ($row = $result->fetch_assoc()) {
     $id = $row['pID'];

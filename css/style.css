@@ -318,6 +318,7 @@ footer {
   display: flex;
   justify-content: center;
   background-color: #ffffff;
+  min-width: 300px;
 }
 
 .prod-desc-can {
@@ -347,4 +348,11 @@ footer {
 
 .num-name {
   width: 29%;
+}
+
+/*******************************/
+
+.dpt-header {
+  margin: 50px 0;
+  text-align: center;
 }

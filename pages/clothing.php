@@ -99,13 +99,12 @@
 </nav>
 <div class="page-contents">
 
-<h2>ALL Clothing</h2>
+<h2 class="dpt-header">Clothing</h2>
 <?php
   $db = get_mysqli_connection();
   $query = false;
 
   $category = 'Clothing';
-  echo "searching by for products...<br><br>";
   $query = $db->prepare("select * from Products where category = ?");
   
   if (!$query) {
@@ -114,9 +113,10 @@
 
   $result = filter_category($category, $db);
 
-  echo "<div class='bigger-can container-fluid'>";
+  echo "<div class='bigger-can container-md'>";
 
   while ($row = $result->fetch_assoc()) {
+    $id = $row['pID'];
     $image = $row['img'];
     $desc = $row["prod_desc"];
     $price = $row["price"];
@@ -125,9 +125,13 @@
     <div class="big-can">
     <div class="kitchen-prod-img"><img class="" src="$image" alt="..." /></div>
     <div class="prod-desc-can">
-    <div class="kitchen-prod-desc">$desc</div>
-    <div class="kitchen-prod-price">$$price.00</div>
+    <div class="id-can">
+    <div class="num-name">Item #
+    <div id="$id">$id</div></div>
+    <div class="kitchen-prod-desc"> $desc</div>
     </div>
+    </div>
+    <div class="kitchen-prod-price">$$price.00</div>
     </div>
     TEXT;
 

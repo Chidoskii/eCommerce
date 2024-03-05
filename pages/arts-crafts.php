@@ -124,12 +124,13 @@
     <div class="big-can">
     <div class="kitchen-prod-img"><img class="" src="$image" alt="..." /></div>
     <div class="prod-desc-can">
-    <div>
-    <div id="$id"></div>
-    <div class="kitchen-prod-desc">$desc</div>
+    <div class="id-can">
+    <div class="num-name">Item #
+    <div id="$id">$id</div></div>
+    <div class="kitchen-prod-desc"> $desc</div>
+    </div>
     </div>
     <div class="kitchen-prod-price">$$price.00</div>
-    </div>
     </div>
     TEXT;
 
