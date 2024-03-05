@@ -98,6 +98,7 @@ if (isset($_POST["Login"])) {
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,600;0,700;1,600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href=<?= CSS ?>>
+    <link rel="shortcut icon" href="../../../imgs/erowdy.ico" />
 </head>
     <body>
         <div class="page-contents">
@@ -110,6 +111,7 @@ if (isset($_POST["Login"])) {
                     <span class="brand-letter-d">d</span>
                     <span class="brand-letter-y">y</span>
                 </h1>
+                
                 <div class="login-form-can">
                     <div class="login">
                         <h2 class="creds-msg">Sign In</h2>

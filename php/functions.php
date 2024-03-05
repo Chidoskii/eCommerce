@@ -27,6 +27,17 @@ function get_user($email) {
 }
 
 /*-----------------------------------------------USER-----------------------------------------------*/
+// Filter by Category
+function filter_category($category, $conn) {
+	$sql = "SELECT pID, category, prod_desc, rating, price, img FROM Products WHERE category= ?";
+	$query = $conn->prepare($sql);
+	$query->bind_param("s", $category);
+	$query->execute();
+	$result = $query->get_result();
+  
+  return $result;
+}
+
 
 
 /*-----------------------------------------------GENERAL-----------------------------------------------*/

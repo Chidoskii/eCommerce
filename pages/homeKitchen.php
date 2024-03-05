@@ -1,15 +1,7 @@
 <?php
-require_once("./php/config.php");
-
-if(empty($_SESSION["logged_in"])){
-    header("location: ./pages/login.php");
-}
-
-if($_SESSION["logged_in"] == false){
-    header("location: ./pages/login.php");
-}
+  require_once("../php/config.php");
+  require_once("../php/functions.php");
 ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -21,9 +13,9 @@ if($_SESSION["logged_in"] == false){
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,600;0,700;1,600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/login.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="shortcut icon" href="../../imgs/erowdy.ico" />
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../../../imgs/erowdy.ico" />
 </head>
 <body>
 <nav class="navbar fixed-top bg-body-tertiary rowdy-nav">
@@ -39,7 +31,7 @@ if($_SESSION["logged_in"] == false){
       </div>
     </a>
     <div class="delivery-addy">
-      <div class="loc-img"><img class="loc-ping" src="./imgs/location_pin.png" alt="..." /></div>
+      <div class="loc-img"><img class="loc-ping" src="../imgs/location_pin.png" alt="..." /></div>
         <div class="user-addy-details">
           <div class="del-to-user">Deliver to XXXX</div>
           <div class="user-city-zip">Bakersfield 93313</div>
@@ -58,14 +50,14 @@ if($_SESSION["logged_in"] == false){
         <ul class="dropdown-menu topnav-drop-menu">
           <li><a class="dropdown-item" href="#">Action</a></li>
           <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item logout-link" href="./php/logout.php">
+          <li><a class="dropdown-item logout-link" href="../php/logout.php">
             LOG OUT
           </a></li>
         </ul>
     </div>
     </div>
     <a class="shop-cart-opts" href="#">
-      <img class="cart-png" src="./imgs/shop.png" alt="..." />
+      <img class="cart-png" src="../imgs/shop.png" alt="..." />
       <div class="shopping-text">Shopping Cart</div>
     </a>
   </div>
@@ -77,7 +69,7 @@ if($_SESSION["logged_in"] == false){
 
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
       <div class="offcanvas-header">
-      <img src="./imgs/erowdy.png" class="d-block erowdy-runner" alt="...">
+      <img src="../imgs/erowdy.png" class="d-block erowdy-runner" alt="...">
         <h5 class="offcanvas-title" id="offcanvasExampleLabel">Hello, XXXXX</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
@@ -100,60 +92,46 @@ if($_SESSION["logged_in"] == false){
     <div class="category-links">Clothing</div>
     <div class="category-links">Entertainment</div>
     <div class="category-links">Electronics</div>
-    <div class="category-links"><a href="./pages/homeKitchen.php">Home & Kitchen</a></div>
+    <div class="category-links"><a href="../pages/homeKitchen.php">Home & Kitchen</a></div>
     <div class="category-links">Health & Hygiene</div>
     <div class="category-links">Garden & Outdoors</div>
   </div>
 </nav>
 <div class="page-contents">
-<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-theme="dark" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item ci-1 active" data-bs-interval="5000">
-      <img src="./imgs/gadgets.jpg" class="d-block w-100 carousel-item-pic" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-      </div>
-    </div>
-    <div class="carousel-item ci-2" data-bs-interval="5000">
-      <img src="./imgs/sneaks.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
-      </div>
-    </div>
-    <div class="carousel-item ci-3" data-bs-interval="5000">
-      <img src="./imgs/brands.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
-      </div>
-    </div>
-    
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-<div class="container-fluid">
 
+<h2>ALL HOME AND KITCHEN</h2>
 <?php
-  require_once("./components/displayProducts.php");
+  $db = get_mysqli_connection();
+  $query = false;
+
+  $category = 'Home and Kitchen';
+  echo "searching by for products...<br><br>";
+  $query = $db->prepare("select * from Products where category = ?");
+  
+  if (!$query) {
+    echo "uh oh";
+  }
+
+  $result = filter_category($category, $db);
+
+  while ($row = $result->fetch_assoc()) {
+    $image = $row['img'];
+  $desc = $row["prod_desc"];
+
+  $card = <<<TEXT
+    <div class="big-can">
+    <div class="kitchen-prod-img"><img class="" src="$image" alt="..." /></div>
+    <div class="kitchen-prod-desc">$desc</div>
+    </div>
+    TEXT;
+
+    echo $card;
+  };
 ?>
-
-</div>
 </div>
 
 <?php
-  require_once("./components/footer.php");
+  require_once("../components/footer.php");
 ?>
 
 

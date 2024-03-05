@@ -1,1 +1,2 @@
 INSERT INTO Users (uID, gender, first_name, last_name, dob, email, phone, password, city, state, country, zip) VALUES (1017,"M","Justin","Gaethje","1970-10-17","jg@smail.com","562-555-5555","ABCabc123!","Las Vegas","Nevada","USA",88901);
+INSERT INTO Users (uID, gender, first_name, last_name, dob, email, phone, password, city, state, country, zip) VALUES (2017,"M","Ronald","Runner","1986-10-17","rr@smail.com","562-555-5555","ABCabc123!","Bakersfield","CA","USA",93313);
