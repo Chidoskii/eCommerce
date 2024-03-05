@@ -1,9 +1,13 @@
 <?php
 // Sorting by Price
-function sort_price($order) {
-	$sql = "SELECT pID, prod_desc, rating, price FROM Products ORDER BY price ?";
+function sort_price($order, $desc) {
+	if($desc) {
+	$sql = "SELECT pID, prod_desc, rating, price FROM Products ORDER BY price DESC";
+	} else {	
+	$sql = "SELECT pID, prod_desc, rating, price FROM Products ORDER BY price";
+	}
 	$query = $db->prepare($sql);
-	$query->bind_param("s", $order);
+	//$query->bind_param("s", $order);
 	$query->execute();
 	$result = $query->get_result();
 
@@ -17,10 +21,14 @@ function sort_price($order) {
 }
 
 //sort by rating
-function sort_rating($order) {
+function sort_rating($order, $desc) {
+	if($desc) {
+	$sql = "SELECT pID, prod_desc, rating, price FROM Products ORDER BY rating DESC";
+	} else {
 	$sql = "SELECT pID, prod_desc, rating, price FROM Products ORDER BY rating";
+	}
 	$query = $db->prepare($sql);
-	$query->bind_param("s", $order);
+	//$query->bind_param("s", $order);
 	$query->execute();
 	$result = $query->get_result();
 
