@@ -38,6 +38,16 @@ function filter_category($category, $conn) {
   return $result;
 }
 
+// GET ALL
+function getAll($conn) {
+	$sql = "SELECT pID, category, prod_desc, rating, price, img FROM Products;";
+	$query = $conn->prepare($sql);
+	$query->execute();
+	$result = $query->get_result();
+  
+  return $result;
+}
+
 
 
 /*-----------------------------------------------GENERAL-----------------------------------------------*/

@@ -79,12 +79,16 @@
         </div>
         <div class="dropdown mt-3">
           <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-            Dropdown button
+            Departments
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="./automotives.php">Automotive</a></li>
+            <li><a class="dropdown-item" href="./arts-crafts.php">Arts & Crafts</a></li>
+            <li><a class="dropdown-item" href="./clothing.php">Clothing</a></li>
+            <li><a class="dropdown-item" href="./electronics.php">Electronics</a></li>
+            <li><a class="dropdown-item" href="./gardenOutdoors.php">Garden & Outdoors</a></li>
+            <li><a class="dropdown-item" href="./homeKitchen.php">Home & Kitchen</a></li>
+            <li><a class="dropdown-item" href="./office.php">Office Supplies</a></li>
           </ul>
         </div>
       </div>
@@ -124,12 +128,13 @@
     <div class="big-can">
     <div class="kitchen-prod-img"><img class="" src="$image" alt="..." /></div>
     <div class="prod-desc-can">
-    <div>
-    <div id="$id"></div>
-    <div class="kitchen-prod-desc">$desc</div>
+    <div class="id-can">
+    <div class="num-name">Item #
+    <div id="$id">$id</div></div>
+    <div class="kitchen-prod-desc"> $desc</div>
+    </div>
     </div>
     <div class="kitchen-prod-price">$$price.00</div>
-    </div>
     </div>
     TEXT;
 

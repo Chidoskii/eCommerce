@@ -37,18 +37,3 @@
       <div class="product-card-bottom-link">Browse Collection</div>
   </div>
 </div>
-
-<div class="promo-product-strip-can">
-  <div class="promo-product-strip">
-    <div class="product-strip-header"></div>
-    <div class="product-image-track">
-      
-    </div>
-  </div>
-  <div class="promo-product-strip">
-  <div class="product-strip-header"></div>
-    <div class="product-image-track">
-      
-    </div>
-  </div>
-</div>

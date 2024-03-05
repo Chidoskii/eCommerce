@@ -1,0 +1,43 @@
+@media screen and (max-width: 450px) {
+  .nav-serch-form {
+    display: none !important;
+  }
+
+  .topnav {
+    justify-content: center !important;
+  }
+
+  .big-can {
+    width: 85% !important;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .big-can {
+    width: 75%;
+    margin: 25px auto;
+  }
+
+  .navbar-brand {
+    font-size: 30pt;
+    letter-spacing: -6px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .shop-cart-opts {
+    display: none;
+  }
+
+  .big-can {
+    width: 75%;
+    margin: 25px auto;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .category-links {
+    display: none;
+  }
+}
