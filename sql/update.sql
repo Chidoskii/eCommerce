@@ -1,0 +1,10 @@
+update Products set category="Home" where category="Home and Kitchen";
+update Products set category="Kitchen" where pID=41;
+update Products set category="Kitchen" where pID=45;
+update Products set category="Garden" where category="Garden and Outdoors";
+update Products set category="Outdoors" where pID=17;
+update Products set category="Outdoors" where pID=36;
+update Products set category="Crafts" where category="Arts and Crafts";
+update Products set category="Auto" where category="Automotive Parts";
+update Products set category="Office" where category="Office Supplies";
+update Products set category="Personal" where category="Beauty and Personal Care";
