@@ -90,10 +90,10 @@
       </div>
     </div>
     <div class="category-links">Clothing</div>
-    <div class="category-links">Entertainment</div>
+    <div class="category-links">Automotives</div>
     <div class="category-links">Electronics</div>
     <div class="category-links"><a href="../pages/homeKitchen.php">Home & Kitchen</a></div>
-    <div class="category-links">Health & Hygiene</div>
+    <div class="category-links">Office Supplies</div>
     <div class="category-links">Garden & Outdoors</div>
   </div>
 </nav>
