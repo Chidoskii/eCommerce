@@ -38,6 +38,17 @@ function filter_category($category, $conn) {
   return $result;
 }
 
+// Filter by three Category
+function mult_category($cat1,$cat2,$cat3, $conn) {
+	$sql = "SELECT pID, category, prod_desc, rating, price, img FROM Products WHERE category= ? or category = ? or category = ?";
+	$query = $conn->prepare($sql);
+	$query->bind_param("sss", $cat1, $cat2, $cat3);
+	$query->execute();
+	$result = $query->get_result();
+  
+  return $result;
+}
+
 // GET ALL
 function getAll($conn) {
 	$sql = "SELECT pID, category, prod_desc, rating, price, img FROM Products;";

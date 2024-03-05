@@ -119,7 +119,7 @@
     echo "uh oh";
   }
 
-  $result = filter_category($category, $db);
+  $result = mult_category($category,$cat1,$cat2, $db);
 
   echo "<div class='bigger-can container-md'>";
 

@@ -111,13 +111,15 @@
   $query = false;
 
   $category = 'Office Supplies';
+  $cat1 = "Electronics";
+  $cat2 = "Books";
   $query = $db->prepare("select * from Products where category = ?");
   
   if (!$query) {
     echo "uh oh";
   }
 
-  $result = filter_category($category, $db);
+  $result = mult_category($category,$cat1,$cat2, $db);
 
   echo "<div class='bigger-can container-md'>";
 
