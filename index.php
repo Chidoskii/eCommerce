@@ -179,7 +179,7 @@ if($_SESSION["logged_in"] == false){
     <div class="kitchen-prod-img"><img class="" src="$image" alt="..." /></div>
     <div class="prod-desc-can">
     <div class="id-can">
-    <div class="num-name">Item #
+    <div class="num-name">ID #:
     <div id="$id">$id</div></div>
     <div class="kitchen-prod-desc"> $desc</div>
     </div>

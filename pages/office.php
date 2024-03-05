@@ -127,17 +127,17 @@
     $desc = $row["prod_desc"];
     $price = $row["price"];
 
-  $card = <<<TEXT
+    $card = <<<TEXT
     <div class="big-can">
     <div class="kitchen-prod-img"><img class="" src="$image" alt="..." /></div>
     <div class="prod-desc-can">
     <div class="id-can">
-    <div class="num-name">Item #
+    <div class="num-name">ID #:
     <div id="$id">$id</div></div>
     <div class="kitchen-prod-desc"> $desc</div>
     </div>
     </div>
-    <div class="kitchen-prod-price">$$price.00</div>
+    <div class="kitchen-prod-price">Price: $ <div id="item-price">$price</div>.00</div>
     </div>
     TEXT;
 

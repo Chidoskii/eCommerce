@@ -15,6 +15,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/mobile.css">
+    <link rel="stylesheet" href="../css/tablet.css">
     <link rel="shortcut icon" href="../../../imgs/erowdy.ico" />
 </head>
 <body>
@@ -103,13 +105,12 @@
 </nav>
 <div class="page-contents">
 
-<h2>ALL HOME AND KITCHEN</h2>
+<h2 class="dpt-header">Arts and Crafts</h2>
 <?php
   $db = get_mysqli_connection();
   $query = false;
 
-  $category = 'Home and Kitchen';
-  echo "searching by for products...<br><br>";
+  $category = 'Arts and Crafts';
   $query = $db->prepare("select * from Products where category = ?");
   
   if (!$query) {
@@ -118,29 +119,32 @@
 
   $result = filter_category($category, $db);
 
+  echo "<div class='bigger-can container-md'>";
+
   while ($row = $result->fetch_assoc()) {
     $id = $row['pID'];
     $image = $row['img'];
     $desc = $row["prod_desc"];
     $price = $row["price"];
 
-  $card = <<<TEXT
+    $card = <<<TEXT
     <div class="big-can">
     <div class="kitchen-prod-img"><img class="" src="$image" alt="..." /></div>
     <div class="prod-desc-can">
     <div class="id-can">
-    <div class="num-name">Item #
+    <div class="num-name">ID #:
     <div id="$id">$id</div></div>
     <div class="kitchen-prod-desc"> $desc</div>
     </div>
     </div>
-    <div class="kitchen-prod-price">$$price.00</div>
+    <div class="kitchen-prod-price">Price: $ <div id="item-price">$price</div>.00</div>
     </div>
     TEXT;
 
     echo $card;
   };
 ?>
+</div>
 </div>
 
 <?php
