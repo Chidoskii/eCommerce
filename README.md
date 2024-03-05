@@ -22,7 +22,7 @@ eRowdy is a an e-commerce platform where users can buy products and vendors can 
 
    - User Profile: {email: "jg@smail.com", password: "ABCabc123!"}
    - User Profile: {email: "phobgen16@cbc.ca", password: "fT7",Y@x3"2,r"}
-   - User Profile: {email: "jg@smail.com", password: "ABCabc123!"}
+   - User Profile: {email: "rr@smail.com", password: "ABCabc123!"}
 
 4. Contact
 
