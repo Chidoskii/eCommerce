@@ -8,8 +8,22 @@
   }
 
   .big-can {
-    width: 85% !important;
+    width: 85%;
     margin: 0 auto;
+  }
+
+  .kitchen-prod-img {
+    height: 79%;
+    align-items: center;
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    background-color: #ffffff;
+    min-width: 250px;
+    max-height: 300px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom: #7c7c7c 1px solid;
   }
 }
 
@@ -25,7 +39,7 @@
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 665px) {
   .shop-cart-opts {
     display: none;
   }

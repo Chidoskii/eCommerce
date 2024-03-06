@@ -322,6 +322,7 @@ footer {
   height: 79%;
   align-items: center;
   display: flex;
+  padding: 5px;
   justify-content: center;
   background-color: #ffffff;
   min-width: 298px;

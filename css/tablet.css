@@ -1,12 +1,12 @@
 @media screen and (min-width: 650px) {
   .big-can {
-    width: 49% !important;
+    width: 49%;
   }
 }
 
 @media screen and (min-width: 750px) {
   .big-can {
-    width: 45% !important;
+    width: 45%;
   }
 }
 
